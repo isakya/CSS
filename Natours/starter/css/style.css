@@ -1,0 +1,35 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* sans-serif 无衬线字体 */
+  font-family: Lato, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #777;
+  padding: 30px;
+}
+
+.header {
+  height: 95vh;
+  /*linear-gradient 渐变颜色背景 */
+  background-image: linear-gradient(to right bottom,#7ed56fb6, #28b485a2),url(../img/hero.jpg);
+  /* 图片适应盒子大小 */
+  background-size: cover;
+  /* 顶部不变，窗口变小裁剪底部，bottom裁剪顶部，center裁剪四周 */
+  background-position: top;
+  clip-path: polygon(0 0, 0 100%, 100% 75%, 100% 0);
+}
