@@ -26,10 +26,49 @@ body {
 .header {
   height: 95vh;
   /*linear-gradient 渐变颜色背景 */
-  background-image: linear-gradient(to right bottom,#7ed56fb6, #28b485a2),url(../img/hero.jpg);
+  background-image: linear-gradient(to right bottom,rgba(126, 213, 111, 0.714), rgba(39, 180, 133, 0.635)),url(../img/hero.jpg);
   /* 图片适应盒子大小 */
   background-size: cover;
   /* 顶部不变，窗口变小裁剪底部，bottom裁剪顶部，center裁剪四周 */
   background-position: top;
+  position: relative;
   clip-path: polygon(0 0, 0 100%, 100% 75%, 100% 0);
+}
+
+.logo-box {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+
+.logo {
+  height: 35px;
+}
+
+.text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.heading-primary {
+  color: #ffffff;
+  text-transform: uppercase;
+
+}
+
+.heading-primary-main {
+  display: block;
+  font-size: 60px;
+  font-weight: 400;
+  letter-spacing: 35px;
+}
+
+.heading-primary-sub {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 17.4px;
+  
 }
