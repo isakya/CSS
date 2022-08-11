@@ -1,0 +1,82 @@
+/**
+  一、mixin
+*/
+
+// 1. 定义mixin
+@mixin clearfix {
+  // 清除浮动
+	&::after {
+		content: "";
+		clear: both;
+		display: table;
+	}
+}
+
+// 2. 使用mixin
+nav {
+  @include clearfix;
+}
+
+/**
+  mixin 传参
+*/
+
+// 1. 传参写法
+@mixin style-link-text($color) {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $color;
+}
+
+// 2. 使用
+a:link {
+  @include style-link-text(#ccc)
+}
+
+
+/**
+  二、function 自定义函数
+*/
+// 1. 定义函数
+@function divide($a, $b) {
+  @return $a / $b;
+}
+
+// 2. 使用函数
+nav {
+  margin: divide(60, 2) * 1px; // 30px
+}
+
+
+/**
+  三、 extend 继承
+*/
+
+// 1. 定义继承样式
+%btn-placeholder {
+  padding: 10px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 100px;
+  @include style-link-text(#ccc)
+}
+
+// 2. 使用 extend
+.btn-main {
+  &:link {
+    @extend %btn-placeholder;
+    background-color: red;
+  }
+}
+
+/**
+  四、变量
+*/
+
+// 1. 定义变量
+$color-primary: #ccc;
+
+// 2. 使用变量
+a {
+  color: $color-primary;
+}
