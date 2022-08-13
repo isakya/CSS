@@ -1,0 +1,30 @@
+.header {
+  height: 95vh;
+  /*linear-gradient 渐变颜色背景 */
+  background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.714), rgba($color-primary-dark, 0.635)), url(../img/hero.jpg);
+  /* 图片适应盒子大小 */
+  background-size: cover;
+  /* 顶部不变，窗口变小裁剪底部，bottom裁剪顶部，center裁剪四周 */
+  background-position: top;
+  position: relative;
+  clip-path: polygon(0 0, 0 100%, 100% 75%, 100% 0);
+
+  &__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+  }
+  
+
+  &__logo {
+    height: 3.5rem;
+  }
+
+  &__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+}
