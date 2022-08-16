@@ -32,3 +32,25 @@
     animation: moveInRight 1s ease-out;
   }
 }
+
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  text-transform: 700;
+  display: inline-block;
+  background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+  // 按文字裁剪背景
+  -webkit-background-clip: text;
+  color: transparent;
+  // 文字间隔
+  letter-spacing: .2rem;
+  // 过渡属性
+  transition: all .2s;
+
+  &:hover {
+    // skewY 沿Y轴倾斜
+    transform: skewY(2deg) skewX(15deg) scale(1.1);
+    // 文字阴影
+    text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
+  }
+}

@@ -1,6 +1,5 @@
 .row {
   max-width: $grid-width;
-  background-color: #eee;
   margin: 0 auto;
 
   // 选择除了最后一个子元素的元素 
@@ -15,7 +14,6 @@
   // * 包含什么 [class*="col-"]
   // ^ 以什么开头 [class^="col-"]
   [class^="col-"] {
-    background-color: orangered;
     float: left;
 
     &:not(:last-child) {
